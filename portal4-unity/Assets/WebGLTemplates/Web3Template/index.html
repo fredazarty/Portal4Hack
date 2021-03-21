@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | Portal4</title>
+</head>
+<body style="text-align: center">
+<canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
+<script src="Build/Portal4.loader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+<script src="TemplateData/web3Connect.js"></script>
+<script>
+  createUnityInstance(document.querySelector("#unity-canvas"), {
+    dataUrl: "Build/Portal4.data.gz",
+    frameworkUrl: "Build/Portal4.framework.js.gz",
+    codeUrl: "Build/Portal4.wasm.gz",
+    streamingAssetsUrl: "StreamingAssets",
+    companyName: "DefaultCompany",
+    productName: "Portal4",
+    productVersion: "0.1",
+  });
+</script>
+</body>
+</html>
